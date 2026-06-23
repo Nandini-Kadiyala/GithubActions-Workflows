@@ -18,6 +18,9 @@ jobs:
       - name: print files
         run: ls -la
 
+      - name: one step back
+        run: cd ..
+
       - name: change path
         run: cd /home
 
