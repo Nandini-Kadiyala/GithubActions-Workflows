@@ -19,4 +19,7 @@ jobs:
         run: ls -la
 
       - name: change path
-        run: cd /home/ubuntu
+        run: cd /home
+
+      - name: show present working directory
+        run: pwd
