@@ -1,0 +1,13 @@
+name: simple workflow
+  
+on:
+  workflow_dispatch:
+  
+jobs:
+  blind:
+    name: simple workflow
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: print hello world
+        run: echo "Hello world"
