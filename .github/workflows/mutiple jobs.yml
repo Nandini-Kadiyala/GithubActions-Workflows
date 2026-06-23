@@ -1,0 +1,25 @@
+name: multiple jobs in parallel
+on:
+  workflow_dispatch: 
+
+jobs:
+  blind:
+    name: build the job
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code
+        run: echo "Build"
+
+  test:
+    name: test the job
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the code
+        run: echo "test"
+
+  deploy:
+    name: deploy the code
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy the code
+        run: echo "deploy"
