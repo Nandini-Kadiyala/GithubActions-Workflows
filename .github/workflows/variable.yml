@@ -1,0 +1,11 @@
+name: sample workflow using variable
+on:
+    workflow_dispatch:
+
+jobs:
+    build:
+        name: sample workflow using vars
+        runs-on: ubuntu-latest
+        steps:
+            - name: print the variable
+              run: echo "{{ vars.MY_NAME }}"
