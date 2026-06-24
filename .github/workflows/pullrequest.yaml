@@ -1,0 +1,12 @@
+name: pullrequest on branch
+on:
+    pull_request:
+        branches:
+            - main
+jobs:
+    build:
+        name: building the code
+        runs-on: ubuntu-latest
+        steps:
+            - name: executing the code
+              run: echo "sample python code"
