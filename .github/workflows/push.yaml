@@ -1,0 +1,12 @@
+name: push in specific function
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build:
+        name: pushing the code
+        runs-on: ubuntu-latest
+        steps:
+            - name: print the sample program
+              run: echo "sample program"
