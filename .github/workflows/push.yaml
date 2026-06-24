@@ -2,7 +2,7 @@ name: push in specific function
 on:
     push:
         branches:
-            - main
+            - dev
 jobs:
     build:
         name: pushing the code
