@@ -1,0 +1,18 @@
+name: code checkout 
+on:
+    push:
+        branches:
+            - dev
+jobs:
+    checkout:
+        name: code checkout from branch
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+
+            - name: verify the dir
+              run: pwd
+
+            - name: print the code
+              run: echo "code is successfully checkout"
