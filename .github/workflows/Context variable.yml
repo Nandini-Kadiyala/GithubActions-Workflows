@@ -13,3 +13,4 @@ jobs:
                 echo "Branch: ${{ github.ref }}"
                 echo "Commit SHA: ${{ github.sha }}"
                 echo "Actor: ${{ github.actor }}"
+                echo "event: ${{ github.event_name }}"
