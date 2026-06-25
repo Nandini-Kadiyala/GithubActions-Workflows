@@ -1,0 +1,24 @@
+name: inputs demo
+on:
+    workflow_dispatch:
+        inputs:
+          environment:
+            description: choice of environment
+            required: true
+            default: dev
+            type: choice
+            options:
+              - main
+              - dev
+              - prod
+          artifact_tag:
+              description: version of app
+              required: true       
+            
+jobs:
+    build:
+        name: deploying the app
+        runs-on: ubuntu-latest
+        steps:
+            - name: selecting app
+              run: "echo Deploying ${{ inputs.artifact_tag }} Application ${{ inputs.environment }}"
