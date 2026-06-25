@@ -5,7 +5,9 @@ env:
     MY_ENV: dev
 jobs:
     env-demo:
+        env:
+            MY_APP: TEST
         runs-on: ubuntu-latest
         steps:
             - name: deploying env
-              run: echo "App is connecting to {{ $MY_ENV }}"
+              run: echo "App is connecting to $MY_ENV"
