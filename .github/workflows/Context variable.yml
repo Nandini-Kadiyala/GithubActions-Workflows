@@ -1,0 +1,15 @@
+name: Context variable
+on:
+    workflow_dispatch:
+
+jobs:
+    Build:
+        name: Building variables
+        runs-on: ubuntu-latest
+        steps:
+            - name: show Github context
+              run: |
+                echo "Repository: ${{ github.repository }}"
+                echo "Branch: ${{ github.ref }}"
+                echo "Commit SHA: ${{ github.sha }}"
+                echo "Actor: ${{ github.actor }}"
