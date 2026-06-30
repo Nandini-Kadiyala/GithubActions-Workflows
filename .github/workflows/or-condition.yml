@@ -1,0 +1,13 @@
+name: or-condition
+on:
+    push:
+        branches:
+            - main
+jobs:
+    Build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Runs the application
+              if: github.actor == 'Nandini-Kadiyala' || github.actor == 'chaitanya-kommi'
+              run: echo "Application"
+            
