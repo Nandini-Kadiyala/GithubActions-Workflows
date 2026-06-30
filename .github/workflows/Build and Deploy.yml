@@ -1,0 +1,22 @@
+name: Build abd Deploy
+on: 
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+jobs:
+    Build:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'main'
+        steps:
+            - name: Run the job
+              run: echo "Run the App"
+    Deploy:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        steps:
+            - name: Depoly the application
+              run: echo "Deploy the app"
+
